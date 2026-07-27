@@ -28,7 +28,8 @@ static const Color secondaryDark = Color(0xFF6D28D9);
   static const Color pending = Color(0xFFF59E0B);
 
   static const Color transparent = Colors.transparent;
-
+  static const Color white = Colors.white;
+  
   // ======================================================
   // Light Theme Colors
   // ======================================================

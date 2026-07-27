@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'core/routes/app_routes.dart';
+import 'core/constants/theme/theme.dart';
 
 
 
@@ -13,6 +14,8 @@ class TaskFlow extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'TaskFlow',
       themeMode: ThemeMode.system,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       initialRoute: AppRoutes.home,
       getPages: AppRoutes.routes,
     );
