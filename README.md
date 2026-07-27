@@ -1,6 +1,6 @@
-# taskflow
+# Taskflow
 
-A new Flutter project.
+A Flutter task management app created for learning and practice.
 
 ## Getting Started
 
