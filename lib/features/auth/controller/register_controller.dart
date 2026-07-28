@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:taskflow/utils/widgets/loading_controller.dart';
+
 
 class RegisterController extends GetxController{
 
+  final LoadingController loading = Get.find<LoadingController>();
   final formKey = GlobalKey<FormState>();
 
   final nameController = TextEditingController();
@@ -14,7 +17,7 @@ class RegisterController extends GetxController{
   void register(){
     if(formKey.currentState!.validate()){
       //====Logic Start======
-      
+      loading.show();
       nameController.clear();
       emailController.clear();
       passwordController.clear();

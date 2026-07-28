@@ -20,9 +20,13 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final width = AppDevice.width(context);
+    final height = AppDevice.height(context);
+    
     return SingleChildScrollView(
       child: SizedBox(
-        height: MediaQuery.of(context).size.height,
+        height: height,
         child: Form(
           key: controller.formKey,
           
@@ -30,7 +34,7 @@ class LoginForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                height: AppDevice.height(context) * 0.15,
+                height: height * 0.15,
               ),
               Text("Task-Flow",
                 style: Theme.of(context).textTheme.headlineLarge!.
@@ -42,7 +46,7 @@ class LoginForm extends StatelessWidget {
                    copyWith(color: AppColors.primaryDark),
               ),
               SizedBox(
-                height: AppDevice.height(context) * 0.05,
+                height: height * 0.05,
               ),
               Text("Login to your account",
                 style: Theme.of(context).textTheme.bodySmall
@@ -97,7 +101,7 @@ class LoginForm extends StatelessWidget {
                 onPressed: controller.login,
               ),
               SizedBox(
-                height: AppDevice.height(context) * 0.10,
+                height: height * 0.10,
               ),
               Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -115,7 +119,7 @@ class LoginForm extends StatelessWidget {
                   ),
                   onPressed: () {
                     // Navigate to Sign Up
-                    Get.toNamed(AppRoutes.register);
+                    Get.offAndToNamed(AppRoutes.register);
                   },
                   child: Text(
                     "Sign Up",

@@ -14,7 +14,7 @@ class AuthBackground extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Stack(
-  children: [
+    children: [
     Positioned(
       right: -120,
       top: -300,
@@ -42,6 +42,8 @@ class AuthBackground extends StatelessWidget {
     ),
 
     Container(
+      height: height,
+      width: width,
       padding: const EdgeInsets.all(20),
       child: child,
     ),

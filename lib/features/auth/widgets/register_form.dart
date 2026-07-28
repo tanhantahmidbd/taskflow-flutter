@@ -50,7 +50,7 @@ class RegisterForm extends StatelessWidget{
                 SizedBox(width: AppSizes.sm,),
                 TextButton(
                   style: TextButton.styleFrom(padding: EdgeInsets.zero,minimumSize: Size.zero,tapTargetSize: MaterialTapTargetSize.shrinkWrap),
-                  onPressed: (){Get.toNamed(AppRoutes.login);},
+                  onPressed: (){Get.offAndToNamed(AppRoutes.login);},
                   child: Text("Login",style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: AppColors.primary,fontWeight: FontWeight.w600),),
                 ),
               ],),//Row
