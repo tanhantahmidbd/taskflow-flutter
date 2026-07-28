@@ -1,21 +1,38 @@
-Taskflow
+# Taskflow
 
-A Flutter task management app created for learning and practice.
+A Flutter task management app built for learning and practice with authentication flow, clean architecture, state management, and reusable UI components.
 
-About The Project
+## Table of Contents
 
-Taskflow is a Flutter-based task management application built to practice clean architecture, state management, authentication flow, and reusable UI components.
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Roadmap](#roadmap)
+- [License](#license)
 
-Features
+## Features
 
 - User authentication flow (Login & Register)
 - Global loading state management
 - Reusable loading widget
 - Clean and maintainable Flutter project structure
+- State management using GetX
 - Task management features (upcoming)
 
-Project Structure
+## Tech Stack
 
+- **Flutter**
+- **Dart**
+- **GetX**
+- **Clean Architecture**
+- **REST API (Upcoming)**
+
+## Project Structure
+
+```text
 lib/
 ├── features/
 │   └── auth/
@@ -30,46 +47,41 @@ lib/
 │
 └── main.dart
 
-Getting Started
 
-Prerequisites
+## Installation
+​Clone the repository:
 
-- Flutter SDK installed
-- Android Studio or VS Code
-- Emulator or physical device
-
-Installation
-
-Clone the repository:
-
-git clone https://github.com/tanhantahmidbd/taskflow-flutter.git
+git clone [https://github.com/tanhantahmidbd/taskflow.git](https://github.com/tanhantahmidbd/taskflow.git)
 
 Navigate to the project folder:
-
 cd taskflow
 
 Install dependencies:
-
 flutter pub get
 
-Run the application:
+Usage
+​Run the application:
 
 flutter run
 
-Development Progress
+Requirements:
+​Flutter SDK installed
+​Android Studio or VS Code
+​Emulator or physical device
+​Configuration
+​Currently, the project does not require any additional configuration.
+Future API integration will include environment configuration for backend connection and API keys.
+​Roadmap
+​[x] Flutter project setup
+​[x] Authentication UI flow
+​[x] Login & Register screens
+​[x] Global loading system
+​[ ] Authentication API integration
+​[ ] Task management features
+​[ ] Backend integration
+​[ ] Push notifications
+​[ ] App optimization
+​License
+​This project is licensed under the MIT License - see the LICENSE file for details.
+​Made with ❤️ by tanhantahmidbd
 
-- ✅ Flutter project setup
-- ✅ Authentication UI flow
-- ✅ Login & Register screens
-- ✅ Global loading system
-- ⏳ Authentication API integration
-- ⏳ Task management features
-
-Resources
-
-- "Flutter Documentation" (https://docs.flutter.dev/)
-- "Flutter Learning Resources" (https://docs.flutter.dev/reference/learning-resources)
-
-License
-
-This project is created for learning and practice purposes.
