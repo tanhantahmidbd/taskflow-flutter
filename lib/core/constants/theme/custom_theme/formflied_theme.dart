@@ -2,142 +2,78 @@ import 'package:flutter/material.dart';
 import 'package:taskflow/core/constants/color.dart';
 
 class AppInputDecoration {
-  static InputDecorationTheme lightInputDecorationTheme =
-      InputDecorationTheme(
-    filled: true,
-    fillColor: AppColors.lightCard,
+  AppInputDecoration._();
 
-    contentPadding: const EdgeInsets.symmetric(
-      horizontal: 18,
-      vertical: 16,
-    ),
-
+  static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
+    errorMaxLines: 3,
     prefixIconColor: AppColors.primary,
     suffixIconColor: AppColors.primary,
+    //constraints: const BoxConstraints.expand(height: 14.inputFieldHeight),
+    labelStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.black),
+    hintStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.black),
+    errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
+    floatingLabelStyle: const TextStyle().copyWith(color: Colors.black.withOpacity(0.8)),
 
-    hintStyle: TextStyle(
-      color: Colors.grey.shade500,
-      fontSize: 15,
-      fontFamily: "Poppins",
-    ),
-
-    labelStyle: const TextStyle(
-      color: Colors.black87,
-      fontSize: 15,
-      fontFamily: "Poppins",
-    ),
-
-    floatingLabelStyle: TextStyle(
-      color: AppColors.primary,
-      fontSize: 16,
-      fontFamily: "Poppins",
-    ),
-
-    border: OutlineInputBorder(
+    border: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(
-        color: AppColors.lightBorder,
-      ),
+      borderSide: const BorderSide(width: 1, color: AppColors.lightBorder),
     ),
-
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(
-        color: AppColors.lightBorder,
-      ),
-    ),
-
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(
-        color: AppColors.primary,
-        width: 2,
-      ),
-    ),
-
-    errorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(
-        color: Colors.red,
-      ),
-    ),
-
-    focusedErrorBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(
-        color: Colors.red,
-        width: 2,
-      ),
-    ),
-  );
-
-
-  static InputDecorationTheme darkInputDecorationTheme =
-      InputDecorationTheme(
-    filled: true,
-    fillColor: AppColors.darkCard,
-
-    contentPadding: const EdgeInsets.symmetric(
-      horizontal: 18,
-      vertical: 16,
-    ),
-
-    prefixIconColor: AppColors.primary,
-    suffixIconColor: AppColors.primary,
     
-    hintStyle: TextStyle(
-      color: Colors.grey.shade400,
-      fontSize: 15,
-      fontFamily: "Poppins",
-    ),
-
-    labelStyle: const TextStyle(
-      color: Colors.white70,
-      fontSize: 15,
-      fontFamily: "Poppins",
-    ),
-
-    floatingLabelStyle: TextStyle(
-      color: AppColors.primary,
-      fontSize: 16,
-      fontFamily: "Poppins",
-    ),
-
-    border: OutlineInputBorder(
+    enabledBorder: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(
-        color: AppColors.darkBorder,
-      ),
+      borderSide: const BorderSide(width: 1, color: AppColors.lightBorder),
     ),
-
-    enabledBorder: OutlineInputBorder(
+    
+    focusedBorder: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(
-        color: AppColors.darkBorder,
-      ),
+      borderSide: const BorderSide(width: 1, color: AppColors.primary),
     ),
-
-    focusedBorder: OutlineInputBorder(
+    
+    errorBorder: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: BorderSide(
-        color: AppColors.primary,
-        width: 2,
-      ),
+      borderSide: const BorderSide(width: 1, color: Colors.red),
     ),
-
-    errorBorder: OutlineInputBorder(
+    
+    focusedErrorBorder: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(
-        color: Colors.red,
-      ),
+      borderSide: const BorderSide(width: 2, color: Colors.orange),
     ),
+  
+  );//-----
 
-    focusedErrorBorder: OutlineInputBorder(
+  static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
+    errorMaxLines: 3,
+    prefixIconColor: AppColors.primary,
+    suffixIconColor: AppColors.primary,
+    //constraints: const BoxConstraints.expand(height: 14.inputFieldHeight),
+    labelStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.white),
+    hintStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.white),
+    errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
+    floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
+
+    border: OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(14),
-      borderSide: const BorderSide(
-        color: Colors.red,
-        width: 2,
-      ),
+      borderSide: const BorderSide(width: 1, color: AppColors.darkBorder),
+    ),
+    
+    enabledBorder: OutlineInputBorder().copyWith(
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(width: 1, color: AppColors.darkBorder),
+    ),
+    
+    focusedBorder: OutlineInputBorder().copyWith(
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(width: 1, color: AppColors.primary),
+    ),
+    
+    errorBorder: OutlineInputBorder().copyWith(
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(width: 1, color: Colors.red),
+    ),
+    
+    focusedErrorBorder: OutlineInputBorder().copyWith(
+      borderRadius: BorderRadius.circular(14),
+      borderSide: const BorderSide(width: 2, color: Colors.orange),
     ),
   );
 }

@@ -16,7 +16,7 @@ class TaskFlow extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.login,
       getPages: AppRoutes.routes,
     );
   }
