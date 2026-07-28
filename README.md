@@ -31,7 +31,6 @@ A Flutter task management app built for learning and practice with authenticatio
 - **REST API (Upcoming)**
 
 ## Project Structure
-
 ```text
 lib/
 ├── features/
@@ -46,42 +45,53 @@ lib/
 │       └── loading_controller.dart
 │
 └── main.dart
-
+```
 
 ## Installation
-​Clone the repository:
 
-git clone [https://github.com/tanhantahmidbd/taskflow.git](https://github.com/tanhantahmidbd/taskflow.git)
+Clone the repository:
+```bash
+git clone https://github.com/tanhantahmidbd/taskflow.git
+```
 
 Navigate to the project folder:
+```bash
 cd taskflow
-
+```
 Install dependencies:
+```bash
 flutter pub get
+```
 
-Usage
-​Run the application:
-
+## Usage
+Run the application:
+```bash
 flutter run
-
+```
 Requirements:
-​Flutter SDK installed
-​Android Studio or VS Code
-​Emulator or physical device
-​Configuration
-​Currently, the project does not require any additional configuration.
+- Flutter SDK installed
+- Android Studio or VS Code
+- Emulator or physical device
+
+## Configuration
+
+Currently, no additional configuration is required.
+
 Future API integration will include environment configuration for backend connection and API keys.
-​Roadmap
-​[x] Flutter project setup
-​[x] Authentication UI flow
-​[x] Login & Register screens
-​[x] Global loading system
-​[ ] Authentication API integration
-​[ ] Task management features
-​[ ] Backend integration
-​[ ] Push notifications
-​[ ] App optimization
-​License
-​This project is licensed under the MIT License - see the LICENSE file for details.
-​Made with ❤️ by tanhantahmidbd
+
+## Roadmap
+
+- [x] Flutter project setup
+- [x] Authentication UI flow
+- [x] Login & Register screens
+- [x] Global loading system
+- [ ] Authentication API integration
+- [ ] Task management features
+- [ ] Backend integration
+- [ ] Push notifications
+- [ ] App optimization
+
+## License
+- This project is licensed under the MIT License - see the LICENSE file for details.
+- Made with ❤️ by tanhantahmidbd
 
