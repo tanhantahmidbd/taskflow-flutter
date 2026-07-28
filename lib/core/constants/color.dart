@@ -29,6 +29,8 @@ static const Color secondaryDark = Color(0xFF6D28D9);
 
   static const Color transparent = Colors.transparent;
   static const Color white = Colors.white;
+  static const Color black = Colors.black;
+  
   
   // ======================================================
   // Light Theme Colors

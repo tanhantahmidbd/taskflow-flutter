@@ -8,6 +8,7 @@ import 'package:taskflow/utils/widgets/elevated_button.dart';
 import 'package:taskflow/utils/validator/app_validator.dart';
 import 'package:taskflow/features/auth/controller/login_controller.dart';
 import 'package:taskflow/core/constants/app_sizes.dart';
+import 'package:taskflow/core/routes/app_routes.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -29,7 +30,7 @@ class LoginForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                height: AppDevice.height(context) * 0.20,
+                height: AppDevice.height(context) * 0.15,
               ),
               Text("Task-Flow",
                 style: Theme.of(context).textTheme.headlineLarge!.
@@ -40,8 +41,13 @@ class LoginForm extends StatelessWidget {
                 style: Theme.of(context).textTheme.bodyMedium!.
                    copyWith(color: AppColors.primaryDark),
               ),
+              SizedBox(
+                height: AppDevice.height(context) * 0.05,
+              ),
+              Text("Login to your account",
+                style: Theme.of(context).textTheme.bodySmall
+              ),
               SizedBox(height: AppSizes.lg),
-              
               AppTextFormField(
                 controller: controller.emailController,
                 hintText: "Enter your email",
@@ -61,13 +67,66 @@ class LoginForm extends StatelessWidget {
                 prefixIcon: const Icon(Icons.lock_outlined),
               ),
 
-              const SizedBox(height: AppSizes.lg),
+              const SizedBox(height: AppSizes.sm),
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                    minimumSize: Size.zero,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  onPressed: () {
+                    // Forgot password logic
+                  },
+                  child: Text(
+                    "Forgot password",
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall!
+                        .copyWith(
+                          color: AppColors.primaryLight,
+                        ),
+                  ),
+                ),
+              ),
+              SizedBox(height: AppSizes.lg),
 
               AppElevatedButton(
                 text: "Log In",
                 onPressed: controller.login,
               ),
-
+              SizedBox(
+                height: AppDevice.height(context) * 0.10,
+              ),
+              Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account?",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                SizedBox(width: AppSizes.sm),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                    minimumSize: Size.zero,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  ),
+                  onPressed: () {
+                    // Navigate to Sign Up
+                    Get.toNamed(AppRoutes.register);
+                  },
+                  child: Text(
+                    "Sign Up",
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: AppColors.primary,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            ),//Row
             ],
           ),//-----Column
         ),
