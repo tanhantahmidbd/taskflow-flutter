@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:taskflow/utils/widgets/loading_controller.dart';
+import 'package:taskflow/features/auth/apis/register.dart';
+import 'package:taskflow/core/routes/app_routes.dart';
+import 'package:taskflow/utils/helper/app_overlay.dart';
 
 
 class RegisterController extends GetxController{
@@ -14,22 +17,26 @@ class RegisterController extends GetxController{
   final confirmPasswordController = TextEditingController();
 
 
-  void register(){
-    if(formKey.currentState!.validate()){
-      //====Logic Start======
-      loading.show();
-      nameController.clear();
-      emailController.clear();
-      passwordController.clear();
-      confirmPasswordController.clear();
-         
-      //====Logic End======
+  Future<void> register()async{    
+    if(!formKey.currentState!.validate()){return;}
+    loading.show();
+    try{
+      final registerInfo = {
+        "name" : nameController.text.trim(),
+        "email" : emailController.text.trim(),
+        "password" : passwordController.text.trim(),
+        "password_confirmation" : confirmPasswordController.text.trim(),  
+      };
 
-      //=====Api Call Start========
-      
-      //=====Api Call End========
-      
-    }//==========
+      final success = await registerApi(registerInfo);
+      if(success){
+        Get.offAndToNamed(AppRoutes.home);
+      }
+    }catch(e){
+      AppOverlay.errorSnackBar(message: "Something is wrong");
+    }finally{
+      loading.hide();
+    }
   }
   //=============
   @override

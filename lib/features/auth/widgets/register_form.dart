@@ -41,7 +41,7 @@ class RegisterForm extends StatelessWidget{
               SizedBox(height: AppSizes.lg),
               AppTextFormField(controller: controller.passwordController,hintText: "enter password",labelText: "Password",prefixIcon: Icon(Icons.lock_outlined),validator: AppValidator.password),
               SizedBox(height: AppSizes.lg),
-              AppTextFormField(controller: controller.confirmPasswordController,hintText: "enter confirmation password",labelText: "Confirmation Password",prefixIcon: Icon(Icons.lock_outlined),validator: AppValidator.password),
+              AppTextFormField(controller: controller.confirmPasswordController,hintText: "enter confirmation password",labelText: "Confirmation Password",prefixIcon: Icon(Icons.lock_outlined),validator:(value)=>AppValidator.confirmPassword(value,controller.passwordController.text)),
               SizedBox(height: AppSizes.lg),
               AppElevatedButton(text: "Register Account",onPressed: (){controller.register();},),
               SizedBox(height: height *0.10),
