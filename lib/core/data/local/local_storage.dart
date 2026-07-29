@@ -7,7 +7,7 @@ class LocalStorageService{
   static const String _keyEmail = 'email';
   static const String _keyToken = 'token';
   
-  static Future<void> saveUserData(Map<String,String> data)async{
+  static Future<void> saveUserData(Map<String,dynamic> data)async{
     await _box.write(_keyName,data['name']);
     await _box.write(_keyEmail,data['email']);
     await _box.write(_keyToken,data['token']);

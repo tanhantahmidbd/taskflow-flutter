@@ -17,11 +17,22 @@ class AppValidator {
     if(value==null ||value.trim().isEmpty){
       return "Password is required";
     }
-    if(value.length<6){
-      return 'Password must be at least 6 characters';
+    if(value.length<4){
+      return 'Password must be at least 4 characters';
     }
     return null;
   }//===========
+  static String? confirmPassword(String? value, String password) {
+    if (value == null || value.trim().isEmpty) {
+      return "Confirm password is required";
+    }
+  
+    if (value != password) {
+      return "Passwords do not match";
+    }
+  
+    return null;
+  }//======
   
   static String? requiredField(String? value, String fieldName) {
     if (value == null || value.trim().isEmpty) {
@@ -29,6 +40,7 @@ class AppValidator {
     }
 
     return null;
-  }
+  }//=======
+  
   
 }
