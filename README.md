@@ -15,12 +15,17 @@ A Flutter task management app built for learning and practice with authenticatio
 
 ## Features
 
-- User authentication flow (Login & Register)
+- User authentication (Login & Register)
+- Authentication API integration
+- Local storage management
+- Form validation
+- Task CRUD API integration
+- Category CRUD API integration
+- Bottom navigation
 - Global loading state management
 - Reusable loading widget
 - Clean and maintainable Flutter project structure
 - State management using GetX
-- Task management features (upcoming)
 
 ## Tech Stack
 
@@ -28,23 +33,43 @@ A Flutter task management app built for learning and practice with authenticatio
 - **Dart**
 - **GetX**
 - **Clean Architecture**
-- **REST API (Upcoming)**
+- **REST API**
+- **Local Storage**
 
 ## Project Structure
 ```text
 lib/
+├── app.dart
+├── main.dart
+│
+├── core/
+│   ├── constants/
+│   ├── routes/
+│   └── data/
+│
 ├── features/
-│   └── auth/
-│       ├── controller/
+│   ├── auth/
+│   │   ├── views/
+│   │   ├── controller/
+│   │   ├── apis/
+│   │   ├── models/
+│   │   └── widgets/
+│   │
+│   ├── home/
+│   │   └── views/
+│   │
+│   ├── profile/
+│   │
+│   └── task/
 │       ├── views/
-│       └── widgets/
+│       ├── controllers/
+│       ├── apis/
+│       └── models/
 │
-├── utils/
-│   └── widgets/
-│       ├── global_loading.dart
-│       └── loading_controller.dart
-│
-└── main.dart
+└── utils/
+    ├── helper/
+    ├── widgets/
+    └── validator/
 ```
 
 ## Installation
@@ -84,10 +109,16 @@ Future API integration will include environment configuration for backend connec
 - [x] Flutter project setup
 - [x] Authentication UI flow
 - [x] Login & Register screens
+- [x] Authentication API integration
+- [x] Local storage management
+- [x] Form validation
 - [x] Global loading system
-- [ ] Authentication API integration
-- [ ] Task management features
-- [ ] Backend integration
+- [x] Bottom navigation
+- [x] Task API integration
+- [x] Category API integration
+- [ ] Task UI implementation
+- [ ] Category UI implementation
+- [ ] Backend integration improvements
 - [ ] Push notifications
 - [ ] App optimization
 
