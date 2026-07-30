@@ -11,9 +11,9 @@ class AppColors {
   static const Color primaryLight = Color(0xFF3B82F6);
   static const Color primaryDark = Color(0xFF1D4ED8);
 
-static const Color secondary = Color(0xFF8B5CF6);
-static const Color secondaryLight = Color(0xFFA78BFA);
-static const Color secondaryDark = Color(0xFF6D28D9);
+  static const Color secondary = Color(0xFF8B5CF6);
+  static const Color secondaryLight = Color(0xFFA78BFA);
+  static const Color secondaryDark = Color(0xFF6D28D9);
 
   static const Color success = Color(0xFF22C55E);
   static const Color warning = Color(0xFFF59E0B);
@@ -65,4 +65,27 @@ static const Color secondaryDark = Color(0xFF6D28D9);
   static const Color darkDivider = Color(0xFF475569);
 
   static const Color darkShadow = Color(0x33000000);
+
+  // ======================================================
+  // Gradient Colors
+  // ======================================================
+
+  static const LinearGradient primaryGradient = LinearGradient(
+    colors: [
+      Color(0xFF2563EB),
+      Color(0xFF8B5CF6),
+    ],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+  
+  
+  static const LinearGradient darkGradient = LinearGradient(
+    colors: [
+      Color(0xFF0F172A),
+      Color(0xFF312E81),
+    ],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
 }
